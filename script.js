@@ -61,8 +61,12 @@ function extractMeaningfulNumber (fullText, listOfName, file) {
 	var smic = listOfName[listOfName.length - 1].replace(',', '.');
 	var numbers = []
 	for (var i = 0; i < (listOfName.length - 1); i+=1) {
-		var index = fullText.findIndex(element => (element.replaceAll(" ", "") === listOfName[i].replaceAll(" ", "")));
+	    var index = fullText.findIndex(element => (element.replaceAll(" ", "") === listOfName[i].replaceAll(" ", "")));
+	    if (i === 1) {
+		numbers.push(fullText[index+3].replaceAll(',', '.'));
+	    } else {
 		numbers.push(fullText[index+1].replaceAll(',', '.'));
+	    }
 	}
 	return [title, numbers, smic]
 }
