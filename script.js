@@ -159,7 +159,7 @@ function onChange () {
 				var [a, b, c] = exonerationCalculus(numbers, smic);
 				var d = (parseFloat(a)+parseFloat(b)) - c;
 				totalD = d + totalD;
-				var content = "A = " +a+ "<br>B = " +b+ "<br>C = 3 x " +numbers[2]+ " x " +smic+ " = " +c+ "<br>D = " +a+ " + " +b+ " - " +c+ " = " +d.toFixed(2);
+			    var content = "A = " +a+ "<br>B = " +b+ "<br>C = 3 x " +numbers[2]+ " x " +smic+ " = " +c.toFixed(2)+ "<br>D = " +a+ " + " +b+ " - " +c.toFixed(2)+ " = " +d.toFixed(2);
 				outputBoxList.push(createOutputBox(beautifulTitle(title), content));
 			}
 			var totalBox = createOutputBox("Total à déclarer", totalD.toFixed(2) +"€");
