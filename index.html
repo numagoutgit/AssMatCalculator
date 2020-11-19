@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Pour ma maman d'amour</title>
+	<meta name="author" content="Numa Gout">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+</head>
+<body>
+	<div class="title">AssMat Calculator 2000</div>
+<!-- 	<div class="header"> 
+		<div class="title">AssMat Calculator 2000</div>
+	</div> -->
+	<div class="main">
+		<div class="txt">CALCULER LA SOMME D'ARGENT À DÉCLARER</div>
+		<div class="uploader-container">
+			<input multiple type="file" accept="application/pdf" id="pickfile" class="uploader" onchange="onChange()">
+		</div>
+		<div class="form-container" id="form-container">
+			<div class="form-popup" id="my-form">
+				<h2>Entre les valeurs nécéssaires</h2>
+				<label for="salaireNet"> Donne le champs correspondant au salaire net (y compris indemnité) de tes fiches de paies  </label>
+				<input type="text" name="salaireNet" id="salaireNet" placeholder='Ex : "Salaire net déclaré (y compris indemnités)"'class="inputValue" value="Salaire net déclaré (y compris indemnités)" required>
+				<label for="csg"> Donne le champs correspondant au CSG + RDS de tes fiches de paie</label>
+				<input type="text" name="csg" id="csg" placeholder="Ex : &quot;CSG + RDS NON DEDUCTIBLE DE L'IMPOT SUR LE REVENU&quot;" class="inputValue" value="CSG + RDS  NON DEDUCTIBLE DE L'IMPOT SUR LE REVENU" required>
+				<label for="nbJourActivite"> Donne le champs correspondant aux nombres de jour d'activité de tes fiches de paies</label>
+				<input type="text" name="nbJourActivite" id="nbJourActivite" placeholder="Ex : &quot;Nombre de jours d'activité &quot;" class="inputValue" value="Nombre de jours d'activité" required>
+				<label for="smicHoraire"> Donne la valeur du SMIC horaire </label>
+				<input type="number" name="smicHoraire" id="smicHoraire" placeholder="Entrer valeur du SMIC horaire" class="inputValue" required>
+				<button class="btn" id="sendButton">Envoyer</button>
+			</div>
+		</div>
+		
+
+		<div id="result" class="output-container"> </div>
+	</div>
+	<div class="footer">
+		<div class="copyright"> © Numa Gout & Co ® - L'amant de ses dames </div>
+		<div class="copyright"> Designer - Nelly Corporation ® </div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

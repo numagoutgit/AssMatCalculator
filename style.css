@@ -1,0 +1,167 @@
+html {
+	font-family: sans-serif;
+}
+body {
+	margin: 0px;
+	background-color: #3A393D;
+}
+
+.header {
+	display: flex;
+	z-index: 1;
+	background-color: white;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
+	height: 50px;
+	text-align: center;
+}
+.title {
+	color: white;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-size: 16px;
+}
+.main {
+	color: white;
+}
+
+.txt {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 550;
+	padding-top: 29px;
+}
+.uploader-container {
+	text-align: center;
+	display: flex;
+	color: white;
+	margin-top: 50px;
+}
+.uploader {
+	margin: auto;
+	padding: 20px 50px 20px 50px;
+	background-color: cornflowerblue;
+	border-radius: 10px;
+	font-weight: 600;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .3);
+}
+.output-container {
+	display: flex;
+	margin-top: 40px;
+	flex-direction: column;
+	margin-bottom: 100px;
+}
+.output-disp {
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+.output {
+	margin: auto;
+	padding: 5px 10px 5px 10px;
+	background-color: white;
+	color: black;
+	border: solid dimgrey;
+	border-radius: 15px;
+	width: 270px;
+	margin: 0px 10px;
+}
+.output-title {
+	font-size: 18px;
+	text-align: center;
+	padding: 2px 0px;
+}
+.output-line {
+	border-top: 1px solid black;
+	width: 100%;
+}
+.output-content {
+	font-size: 15px;
+	padding: 5px 0px;
+}
+
+.footer {
+	position: fixed;
+	display: flex;	
+	z-index: 1;
+	background-color: #2F2F32;
+	height: 40px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	justify-content: space-between;
+}
+
+.copyright {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 14px;
+	color: lightgrey;
+}
+.form-container {
+	display: none;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2;
+}
+.form-popup {
+	display: flex;
+	flex-direction: column;
+  	max-width: 500px;
+ 	padding: 10px;
+	background-color: white;
+	color: black;
+	margin: auto;
+	border: solid #4CAF50;
+}
+.form-popup h2 {
+	text-align: center;
+}
+.form-popup label {
+	font-size:17px;
+}
+.form-popup input[type=text], .form-popup input[type=number] {
+  	padding: 15px;
+  	margin: 5px 0 22px 0;
+  	border: none;
+  	background: #f1f1f1;
+}
+.form-popup input[type=text]:focus, .form-popup input[type=number]:focus {
+  	background-color: #ddd;
+  	outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+  opacity: 1;
+}
+
+.total {
+	width: 300px;
+	margin: 0px auto 25px auto;
+	text-align: center;
+}
+.total .output-content {
+	font-weight: 600;
+	color: red;
+	font-size: 25px;
+}
+.total .output-title {
+	font-size: 25px;
+}
