@@ -174,7 +174,7 @@ function onChange () {
 				var [title, numbers, smic] = extractMeaningfulNumber(resTextsPdf[i], listOfName, input.files[i]);
 				var [a, b, c] = exonerationCalculus(numbers, smic);
 				var d = (parseFloat(a)+parseFloat(b)) - c;
-				totalD = d + totalD;
+				totalD = Math.max(0, d) + totalD;
 			    var content = "A = " +a+ "<br>B = " +b+ "<br>C = 3 x " +numbers[2]+ " x " +smic+ " = " +c.toFixed(2)+ "<br>D = " +a+ " + " +b+ " - " +c.toFixed(2)+ " = " +d.toFixed(2);
 				outputBoxList.push(createOutputBox(beautifulTitle(title), content));
 			}
