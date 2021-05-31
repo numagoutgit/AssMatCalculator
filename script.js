@@ -56,6 +56,18 @@ function beautifulTitle (str) {
 	return (months[month-1] + " " + year + ", " + fullName);
 }
 
+function selectNthNonNull (list, index, n) {
+	var i = n;
+	var k = 1;
+	while (i > 0) {
+		if (list[index + k].replaceAll(" ", "") !== "") {
+			i -= 1;
+		} 
+		k += 1;
+	}
+	return (list[index + k - 1])
+}
+
 function extractMeaningfulNumber (fullText, listOfName, file) {
 	var title = file.name;
 	var smic = listOfName[listOfName.length - 1].replace(',', '.');
@@ -63,9 +75,9 @@ function extractMeaningfulNumber (fullText, listOfName, file) {
 	for (var i = 0; i < (listOfName.length - 1); i+=1) {
 	    var index = fullText.findIndex(element => (element.replaceAll(" ", "") === listOfName[i].replaceAll(" ", "")));
 	    if (i === 1) {
-		numbers.push(fullText[index+3].replaceAll(',', '.'));
+		numbers.push(selectNthNonNull(fullText, index, 3).replaceAll(',', '.'));
 	    } else {
-		numbers.push(fullText[index+1].replaceAll(',', '.'));
+		numbers.push(selectNthNonNull(fullText, index, 1).replaceAll(',', '.'));
 	    }
 	}
 	return [title, numbers, smic]
